@@ -3,3 +3,4 @@ requests
 pandas
 bokeh
 pandas_bokeh
+paho-mqtt

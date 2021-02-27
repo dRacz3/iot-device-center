@@ -2,9 +2,9 @@ import sqlite3
 
 
 class DatabaseAdapter:
-    def __init__(self):
-        self.DATABASE_FILE = "database.db"
-        self.TABLE_NAME = "MEASUREMENTS"
+    def __init__(self, database_filename : str, table_name : str):
+        self.DATABASE_FILE = database_filename
+        self.TABLE_NAME = table_name
 
         self.__init_table()
 
@@ -22,7 +22,7 @@ class DatabaseAdapter:
         conn = None
         try:
             conn = sqlite3.connect(self.DATABASE_FILE)
-        except Error as e:
+        except Exception as e:
             print(e)
             raise e
         return conn
