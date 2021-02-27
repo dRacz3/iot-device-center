@@ -1,0 +1,6 @@
+flask
+requests
+pandas
+bokeh
+pandas_bokeh
+sqlite3

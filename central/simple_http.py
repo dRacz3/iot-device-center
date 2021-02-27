@@ -2,7 +2,7 @@ import time
 import sqlite3
 from flask import g
 from flask import Flask, request
-from server.database_adapter import DatabaseAdapter
+from central.database_adapter import DatabaseAdapter
 app = Flask(__name__)
 database = DatabaseAdapter()
 
@@ -21,4 +21,5 @@ def new_value():
     return "OK"
 
 
-app.run(port=5050, host="0.0.0.0", debug=True)
+def start():
+    app.run(port=5050, host="0.0.0.0", debug=True)
